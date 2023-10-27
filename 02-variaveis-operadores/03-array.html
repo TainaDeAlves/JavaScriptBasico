@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <h1>Manipulação de Array</h1>
+    <script>
+        // declaração de uma array
+        let frutas;
+
+        // inicialização
+        frutas = ["maça", "banana", "laranja"];
+
+        // declaração e inicialização
+        let notas = ["8", "7", "9", "10"];
+
+        document.write("elementos da  array ")
+        document.write(frutas)
+        document.write("<br>")
+
+        // retornar o segundo elemento
+        let segundoelemento = frutas[1];
+        document.write(`segundo elemento ${segundoelemento}<br>`);
+
+        // alterar o valor da array nomeArray[indece]="novoLavor"
+        let alterar = frutas[1] = "goiaba"
+        document.write(`segundo elementoda array apos a alteração ${frutas[1]}<br>`)
+
+        // retornar a quantidade da array nomeArray.length
+        document.write(`a array fruta possui ${frutas.length} elementos <br>`);
+
+        // adiciona um elemento no final da array nomearray.push("novoValor");
+        frutas.push("uva")
+        document.write(`elementos da array ${frutas}<br>`)
+
+        frutas.push("manga")
+        document.write(`elementos da array ${frutas}<br>`)
+
+        // remover o ultimo elemento da array nomeArray.pop()
+        let frutasremovidas = frutas.pop();
+        document.write(`A ${frutasremovidas} foi exluida da array frutas <br>`)
+        document.write(`elementos da array ${frutas}  <br>`)
+
+        // adicionar um elemento em uma posição especifica nomeArray.splice( x,x"novovalor)
+        frutas.splice(2, 0, "manga");
+        document.write(`A ${frutas} foi adicionada <br>`)
+
+    //   remover um elemento de uma posição especifica nome.splice(x,x)
+        frutas.splice(3,1);
+        document.write(`elementos da array ${frutas} <br>`)
+    </script>
+</body>
+
+</html>
