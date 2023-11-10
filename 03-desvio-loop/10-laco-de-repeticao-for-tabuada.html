@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tainá</title>
+</head>
+<body>
+    <script>
+        // exercicio -10
+          let numero=prompt("digite um numero")
+     let resultado = "";
+
+    for (var i = 1; i <= 10; i++) {
+         resultado += numero + " x " + i + " = " + (numero * i) + "<br>";
+     }
+
+     document.write(resultado);
+    
+// exercicio -11
+
+let numeroInicial = parseFloat(prompt("contagem inicial"));
+ let numeroFinal = parseFloat(prompt("contagem final"));
+ while (numeroInicial <= numeroFinal) {
+     document.write("Contagem: " + numeroInicial + "<br>");
+    numeroInicial++;
+ }
+
+    //  Exercicios -12 
+    
+     let nomes = [];
+     let nome;
+     let contador = 0;
+    
+    
+     while (true) {
+         nome = prompt("Digite um nome ou 'sair' para encerrar:");
+         if (nome === "sair") {
+             break;
+        }
+        nomes.push(nome);
+         contador++;
+     }
+    
+     document.write("Você digitou " + contador + " nome(s).<br> ");
+     document.write("Nomes informados: <br>");
+     for (var i = 0; i < nomes.length; i++) {
+         document.write(nomes[i] + "<br>");
+     }
+    </script>
+</body>
+</html>

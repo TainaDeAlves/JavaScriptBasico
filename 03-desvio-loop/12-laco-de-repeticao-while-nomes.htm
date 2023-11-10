@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tainá</title>
+</head>
+<body>
+    <script>
+        let nomes = [];
+    let nome;
+    let contador = 0;
+    
+    
+    while (true) {
+        nome = prompt("Digite um nome ou 'sair' para encerrar:");
+        if (nome === "sair") {
+            break;
+        }
+        nomes.push(nome);
+        contador++;
+    }
+    
+    document.write("Você digitou " + contador + " nome(s).<br> ");
+    document.write("Nomes informados: <br>");
+    for (var i = 0; i < nomes.length; i++) {
+        document.write(nomes[i] + "<br>");
+    }
+    </script>
+</body>
+</html>
