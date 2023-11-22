@@ -22,7 +22,7 @@ function validacpf(vrcpf) {
     soma += parseInt(vrcpf.charAt(7)) * 3;
     soma += parseInt(vrcpf.charAt(8)) * 2;
 
-    let digitoX = soma%11;
+    let digitoX = soma % 11;
     digitoX = 11 - digitoX;
 
     if (digitoX > 10) {
@@ -34,10 +34,24 @@ function validacpf(vrcpf) {
     if (digitoX !== parseInt(vrcpf.charAt(9))) {
         digitValido = false;
     }
-    
+
+    soma = 0;
+    for (let posicao = 0, pesoY = 11; posicao < 10; posicao++, pesoY--) {
+        soma += parseInt(vrcpf.charAt(posicao)) * pesoY;
+    }
+    let digitoY = 11-(soma%11);
+    if (digitoY >= 10) {
+        digitoY = 0;
+    }
+    if (digitoY !== parseInt(vrcpf.charAt(10))) {
+        digitValido = false;
+    }
+
 
     return digitValido;
-
-
-    return vrcpf.length === 11 & !isNaN(vrcpf);
+    // return vrcpf.length === 11 & !isNaN(vrcpf);
 }
+
+
+
+
